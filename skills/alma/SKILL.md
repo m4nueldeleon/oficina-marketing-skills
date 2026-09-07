@@ -2,7 +2,7 @@
 name: alma
 description: Usar cuando Manuel solicita artes de marca, piezas para feed o vertical, diseños con escenas imaginadas o avatares y composiciones que necesitan dirección visual y revisión editorial.
 metadata:
-  version: "1.5.0"
+  version: "1.6.0"
   updated: "2026-09-07"
   agent_id: alma
 ---
@@ -23,7 +23,7 @@ Los logos se componen desde originales verificados, con fuente y condiciones de 
 
 ## Decisión visual
 
-Recibe brief, copy final, destino y recursos autorizados. Si ya existe copy válido, **conserva exactamente titular, cuerpo y CTA**; Claude Sonnet genera solo la dirección faltante. Sin copy, escribe una acción útil en español: titular hasta 75 caracteres, cuerpo hasta 150 y CTA hasta 32. No inventes cifras, testimonios, urgencia ni entregables por DM. Usa «Guarda esta idea» cuando no existe otro destino verificado.
+Recibe brief, copy final, destino y recursos autorizados. Si ya existe copy válido, **conserva exactamente titular, cuerpo y CTA**; genera solo la dirección faltante. Sin copy, escribe una acción útil en español: titular hasta 75 caracteres, cuerpo hasta 150 y CTA hasta 32. No inventes cifras, testimonios, urgencia ni entregables por DM. Usa «Guarda esta idea» cuando no existe otro destino verificado.
 
 Elige sujeto por la idea, no por costumbre. Usa Manuel cuando aporta cercanía, demostración o el brief lo pide; en herramientas, procesos y metáforas puede funcionar mejor un concepto, objeto o entorno **sin Manuel**. Una petición «sin Manuel» manda. Evita la misma fotografía fija en cada pieza.
 
@@ -43,9 +43,9 @@ Los colores proceden del catálogo validado del renderer. El histórico orienta 
 
 ## Ejecución verificable
 
-El taller solicita a Sonnet `copy` y `direccion_visual` con concepto, identidad, estilo, justificación, look, composición y **una sola escena** (`source`, `prompt`, `alt`). Conserva el plan privado para reutilizarlo al reanudar un trabajo. Los planes anteriores sin `source` conservan Higgsfield como origen.
+El taller asigna Opus a la acción `creative_direction` y solicita `copy` y `direccion_visual` con concepto, identidad, estilo, justificación, look, composición y **una sola escena** (`source`, `prompt`, `alt`). Es la planificación existente, no una segunda llamada para repetir el mismo brief. Sonnet prepara el copy del equipo y NOVA revisa los archivos finales. Conserva el plan privado para reutilizarlo al reanudar un trabajo. Los planes anteriores sin `source` conservan Higgsfield como origen.
 
-Antes de generar, observa las miniaturas privadas de hasta ocho imágenes aprobadas que recibe Sonnet, con identificador, descripción, dimensiones y origen real o generado. El lote cambia entre encargos para mostrar recursos distintos; la selección final debe responder al concepto. El catálogo para el modelo no contiene rutas locales ni URLs arbitrarias.
+Antes de generar, observa las miniaturas privadas de hasta ocho imágenes aprobadas que recibe el modelo, con identificador, descripción, dimensiones y origen real o generado. El lote cambia entre encargos para mostrar recursos distintos; la selección final debe responder al concepto. El catálogo para el modelo no contiene rutas locales ni URLs arbitrarias.
 
 - `source: library` y `photoId` exacto reutilizan una fotografía, avatar o PNG recortado pertinente de Manuel. No inventes que el recurso existente cambió pose, ropa o fondo. Distingue fotografía real y escena creada con IA, incluso si ambas tienen transparencia. Conserva el origen y el hash en metadata.
 - `source: official` y `officialAsset: claude|microsoft` usan el recurso verificado cuando el tema trata de esa empresa. Esta escena no representa a Manuel. No recrees logos por IA ni sugieras colaboración, afiliación o endoso. La procedencia conserva la página fuente y las condiciones editoriales para revisión.

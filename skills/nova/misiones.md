@@ -25,7 +25,7 @@ Devuelve únicamente JSON con esta estructura:
 }
 ```
 
-Máximo veinte pasos, IDs únicos de letras minúsculas, números, guion o guion bajo.
+Máximo seis pasos, IDs únicos de letras minúsculas, números, guion o guion bajo.
 El primer carácter es una letra. Sin ciclos ni dependencias inexistentes.
 Usa solo los empleados relevantes; no inventes trabajo para ocupar a todo el equipo.
 
