@@ -1,6 +1,6 @@
 # Oficina de Marketing · Skills de los empleados
 
-Instrucciones públicas de los catorce compañeros digitales de Manuel de León. Cada skill define personalidad, criterio editorial, entradas, entregas, controles de calidad y traspasos al equipo.
+Instrucciones públicas de los quince compañeros digitales de Manuel de León. Cada skill define personalidad, criterio editorial, entradas, entregas, controles de calidad y traspasos al equipo.
 
 | Empleado | Especialidad |
 |---|---|
@@ -17,7 +17,8 @@ Instrucciones públicas de los catorce compañeros digitales de Manuel de León.
 | [NICO](skills/nico/SKILL.md) | Video corto |
 | [DANTE](skills/dante/SKILL.md) | Video largo y derivados |
 | [ALMA](skills/alma/SKILL.md) | Diseño |
-| [ELENA](skills/elena/SKILL.md) | Relaciones públicas |
+| [ELENA](skills/elena/SKILL.md) | Relaciones públicas y alianzas |
+| [ATLAS](skills/atlas/SKILL.md) | Artículos, SEO y descubrimiento por IA |
 
 Lee la skill correspondiente al encargo y suministra el brief, los activos autorizados y las capacidades reales de tu entorno. Estos archivos no instalan conectores, modelos, cuentas publicitarias ni acceso a una fototeca. La skill por sí sola tampoco concede permisos externos.
 

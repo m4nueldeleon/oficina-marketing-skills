@@ -44,3 +44,7 @@ Los escritores y revisores usan las instrucciones de su rol con el modelo config
 Cada cambio conserva versión, contenido y commit. La oficina compara el hash de la skill cargada con la versión publicada y muestra si hay diferencias. La fecha de Git acredita publicación; un cambio local no publicado no se presenta como una versión pública vigente.
 
 El aprendizaje de los ciclos consiste en registrar hallazgos, artefactos y cambios de reglas, y reutilizar ese contexto. No significa entrenar los pesos del modelo. Las puntuaciones editoriales tampoco son predicciones validadas de alcance, ventas o cobertura.
+
+## 7-sep-2026 · ATLAS y coordinación editorial
+
+ATLAS integra criterios de Claude SEO (MIT, a1480c7e590b16001bd9dc1627eacdcd44d580f9) y Claude Blog (MIT, 84f7abf05036bef48e114a710ff52586643fe239), con referencias primarias dentro de su skill. ALMA distingue evidencia visual de rentabilidad; BRUNO separa Instagram/TikTok en un lote; ELENA conserva STOP, idioma y seguimiento acotado. Las instrucciones públicas no contienen las imágenes ni contactos privados de la oficina.
