@@ -24,6 +24,8 @@ Lee la skill correspondiente al encargo y suministra el brief, los activos autor
 
 [Fuentes y selección con Skill Finder](docs/SKILLS.md). El historial de Git acredita quién cambió cada archivo y cuándo. Los enlaces de la oficina apuntan a commits concretos y se comprueba el hash del contenido cargado.
 
+[Protocolo de aprendizaje y post-mortem](docs/APRENDIZAJE.md): evidencia, adaptación por empleado, pruebas y actualización versionada. La producción automática de LUNA organiza tres investigaciones con tres tratamientos cada una; cada final conserva su propia auditoría.
+
 Las mejoras de reglas y el contexto reutilizado ayudan a orientar decisiones; no equivalen a entrenamiento de pesos. Las rúbricas editoriales no garantizan alcance, ventas ni cobertura periodística.
 
 Licencia MIT. Autoría de las instrucciones de esta oficina: Manuel de León. [Referencias y atribución](NOTICE.md).

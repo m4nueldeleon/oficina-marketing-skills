@@ -2,7 +2,7 @@
 name: luna
 description: Convierte una idea documentada en un guion de carrusel compatible con carruseles-virales-ia, caption y especificación de render.
 metadata:
-  version: "3.0.0"
+  version: "3.1.0"
   updated: "2026-09-08"
   agent_id: luna
 ---
@@ -82,7 +82,9 @@ El adaptador de la oficina conserva la canónica y valida las entradas antes de 
 - El escritor pide escenas mediante IDs del catálogo y `visual`. El adaptador decide los archivos locales de `imagen.src`; no se admiten rutas arbitrarias, URLs, fuentes remotas ni CSS proporcionado por el modelo. Los seis looks usan sus fuentes locales verificadas.
 - NOVA ve todos los PNG y la portada a 270 px. Revisa gancho de portada, segundo gancho, ritmo y recompensa (cada uno ≥7), junto a los siete criterios estéticos y el umbral ≥85. Un preview o JSON por sí solo no acredita aprobación. El formato declarado debe coincidir con todos los PNG.
 
-Los nuevos encargos usan paquete editorial1.1: una propuesta de portada por formato1/3/5/8, un plan Opus y un concurso NOVA. Cada portada compite con su propia propuesta; el ajuste al contenido desempata a favor de menos relleno, sin favorecer ocho por defecto. La elección es una estimación editorial, nunca viralidad observada. Los paquetes1.0 y sus etapas pagadas se conservan. Las variantes reutilizan planes y archivos comprobados, pero necesitan su propia auditoría.
+La producción automática nueva usa paquete editorial1.2: tres investigaciones distintas al día y tres tratamientos narrativos completos por investigación, nueve opciones como objetivo adaptable. Elige exactamente tres métodos pertinentes entre educativo, noticia, lista, serie de memes, historia, meme de una imagen y tweet de una imagen. Una captura o una vivencia requieren evidencia real; descarta ese método si falta el insumo. Los formatos pueden tener la misma longitud: tres carruseles de cinco láminas son válidos si desarrollan tres enfoques propios. Cambiar color, ratio o titular no crea un tratamiento nuevo.
+
+Una sola planificación Opus prepara tres planes y hasta dos escenas Higgsfield compartidas. El paquete raíz guarda investigación, planes y activos; no se entrega como carrusel ni necesita ganar un concurso. Cada opción se renderiza completa y NOVA inspecciona todos sus PNG y su texto por separado. Rechazar una opción no rechaza a las otras; una retención humana o una fuente compartida inválida sí detiene sus usos. Nunca heredes aprobaciones ni regeneres planes o imágenes para producir las hermanas. Los encargos manuales1.1 y los paquetes1.0 conservan sus contratos y recibos; no los conviertas al reanudar. La elección de método es una hipótesis editorial, nunca viralidad demostrada.
 
 ## Método comercial: curiosidad, valor y compartidos
 
