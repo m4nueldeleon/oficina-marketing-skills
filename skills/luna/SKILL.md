@@ -2,8 +2,8 @@
 name: luna
 description: Convierte una idea documentada en un guion de carrusel compatible con carruseles-virales-ia, caption y especificación de render.
 metadata:
-  version: "3.1.0"
-  updated: "2026-09-08"
+  version: "3.2.0"
+  updated: "2026-09-22"
   agent_id: luna
 ---
 
@@ -29,7 +29,7 @@ El runtime solicita el JSON validado del plan y ejecuta render/QA. No mezcles Ma
 
 Elige la longitud por lo que aporta: **1, 3, 5 u 8 láminas**. No rellenes para llegar a ocho. Imagen única: valor autocontenido y acción en caption, sin Desliza. Tres: portada, cuerpo, recompensa guardable; acción en caption. Cinco: portada, rehook, cuerpo, cheatsheet, CTA. Ocho: secuencia más profunda con recompensa y CTA final. Los encargos antiguos conservan su contrato de 7–10 para poder reanudarse sin repetir gasto. Una idea por lámina; variedad de composición por función, sin exigir cuatro layouts a tres páginas. Portada: cuatro a siete palabras y una en _acento_. Cuerpo hasta 22 palabras, con imagen hasta 14. Números de pasos orientan; estadísticas necesitan fuente.
 
-Looks exactos: guia-rapida, oscuro-tech, recurso, editorial-mono, noticia, bosque. Rota evitando el último. Noticia favorece noticia; tutorial/lista guia-rapida; comparativa editorial-mono. Explica la elección en una frase.
+Looks exactos: guia-rapida, oscuro-tech, recurso, editorial-mono, noticia, bosque. Elige por función y coherencia; repetir look no demuestra menor calidad. Noticia favorece noticia; tutorial/lista guia-rapida; comparativa editorial-mono. Explica la elección en una frase.
 
 Por cada lámina escribe un encabezado «Lámina NN» y campos claramente separados:
 
@@ -45,7 +45,7 @@ No escribas cuerpo para lista/pasos/comparativa/prompt: el motor lo ignora. cta-
 
 ### Dirección visual ejecutable
 
-La portada lleva imagen; tres láminas requieren además una interior con imagen, cinco/ocho al menos dos interiores. Una imagen única o un compacto puede usar una escena; el paquete de formatos comparte hasta dos escenas principales para conservar recursos. Incluye alt en todas las páginas. Define función narrativa, sujeto, acción, encuadre y espacio para integrar tipografía. El worker genera con Higgsfield y comprueba archivos antes del render. Un fallo no se presenta como entrega terminada.
+No hay cuota mínima de imágenes. Tipografía, tablas o diagramas pueden explicar el valor; el contrato actual exige al menos un activo pertinente en el manifiesto, reutilizable en portada, y permite interiores tipográficos. Elige recursos existentes por función; la portada no exige una cara ni una generación. Una escena nueva requiere utilidad visual concreta y autorización del runtime antes del proveedor. Incluye alt en todas las páginas. Define función narrativa, sujeto, acción, encuadre y espacio para integrar tipografía. El worker genera con Higgsfield y comprueba archivos antes del render. Un fallo no se presenta como entrega terminada.
 
 Alterna piezas con Manuel y sin Manuel. El histórico rota fotografía editorial, hiperrealismo, avatar 3D, ilustración editorial y collage; adapta la decisión al tema o a la petición explícita. Una foto autorizada puede convertirse en avatar o escena nueva, y un PNG recortado puede integrarse en otra composición. Mantén los rasgos y el estilo del personaje consistentes dentro del carrusel. Una escena generada no demuestra que Manuel haya vivido esa situación. No insertes su foto automáticamente en todas las llamadas a la acción.
 
@@ -82,9 +82,17 @@ El adaptador de la oficina conserva la canónica y valida las entradas antes de 
 - El escritor pide escenas mediante IDs del catálogo y `visual`. El adaptador decide los archivos locales de `imagen.src`; no se admiten rutas arbitrarias, URLs, fuentes remotas ni CSS proporcionado por el modelo. Los seis looks usan sus fuentes locales verificadas.
 - NOVA ve todos los PNG y la portada a 270 px. Revisa gancho de portada, segundo gancho, ritmo y recompensa (cada uno ≥7), junto a los siete criterios estéticos y el umbral ≥85. Un preview o JSON por sí solo no acredita aprobación. El formato declarado debe coincidir con todos los PNG.
 
-La producción automática nueva usa paquete editorial1.2: tres investigaciones distintas al día y tres tratamientos narrativos completos por investigación, nueve opciones como objetivo adaptable. Elige exactamente tres métodos pertinentes entre educativo, noticia, lista, serie de memes, historia, meme de una imagen y tweet de una imagen. Una captura o una vivencia requieren evidencia real; descarta ese método si falta el insumo. Los formatos pueden tener la misma longitud: tres carruseles de cinco láminas son válidos si desarrollan tres enfoques propios. Cambiar color, ratio o titular no crea un tratamiento nuevo.
+## Política editorial 2026-09-22.1: seleccionar antes de gastar
 
-Una sola planificación Opus prepara tres planes y hasta dos escenas Higgsfield compartidas. El paquete raíz guarda investigación, planes y activos; no se entrega como carrusel ni necesita ganar un concurso. Cada opción se renderiza completa y NOVA inspecciona todos sus PNG y su texto por separado. Rechazar una opción no rechaza a las otras; una retención humana o una fuente compartida inválida sí detiene sus usos. Nunca heredes aprobaciones ni regeneres planes o imágenes para producir las hermanas. Los encargos manuales1.1 y los paquetes1.0 conservan sus contratos y recibos; no los conviertas al reanudar. La elección de método es una hipótesis editorial, nunca viralidad demostrada.
+Máximo **tres propuestas textuales por día y una pieza final seleccionada**. Son techos, no cuotas que llenar: si ninguna cumple, cero finales. El contrato actual de Oficina conserva tres planes textuales completos en un paquete por compatibilidad; no son tres paquetes visuales ni tres finales. NOVA evalúa antes de Higgsfield y sólo la elegida recibe activos y una hija final. El runtime aplica el límite y las reservas; esta skill no autoriza gasto. Los contratos históricos preservan versiones y recibos al reanudar, sin convertirlos en permiso para producir todas las hermanas.
+
+Antes de imágenes pagadas, cada candidata identifica lector y situación, problema observable, promesa, recompensa literal, ejemplo o prueba con fuente/fecha, diferencia frente a las últimas diez piezas disponibles y motivo de guardar o enviar. No basta «define, revisa y optimiza»: muestra el mensaje que copiará, la tabla rellenada, el ejemplo desarrollado o el criterio que usará. Si falta histórico, declara el límite. Compara utilidad, especificidad, prueba, encaje, novedad y coste; compara los tres planes y elige uno antes de producir imágenes. El score es criterio editorial, no probabilidad de viralidad.
+
+Puerta antes de Higgsfield: promesa cumplida en el texto; primera evidencia o valor desde la segunda página; cada página agrega un paso, prueba, ejemplo, objeción o criterio; una síntesis usable, sin resumen del resumen; cantidades y numeración coherentes; hechos/experiencias respaldados y simulaciones rotuladas; una acción realizable. Una noticia entrega el hecho principal y su consecuencia razonada sin ocultarlo como anzuelo. El formato sirve al argumento; no rellenar para llegar a ocho.
+
+Plan visual: explicar función de cada activo (prueba, explicación, reconocimiento o identidad), priorizar biblioteca autorizada, captura propia verificada y tabla/diagrama por código. Se permite repetir foto o layout si la información avanza. No pedir arte nuevo para llenar vacío, rotar estilo o cumplir número de imágenes; no disfrazar una pantalla generada de prueba. Si el runtime sólo permite reutilización, respétalo sin fallback pagado.
+
+Los tres planes se conservan en el paquete textual; sólo la elegida entra a producción visual. No interpretar un paquete antiguo como obligación de terminar las variantes descartadas. La decisión de selección y la revisión final son independientes; ninguna hereda aprobación.
 
 ## Método comercial: curiosidad, valor y compartidos
 
@@ -103,7 +111,7 @@ Un CTA a una skill, plantilla o lead magnet exige recurso real, destino verifica
 ## Auditoría antes de la entrega
 
 1. **Psicología:** beneficio reconocible, motivo de envío/guardado, curiosidad sin spoiler y recompensa; comprobar que los cliffhangers se resuelven.
-2. **Diseño:** tras Higgsfield, mirar portadas y miniaturas reales en el concurso; después todos los PNG finales. Corregir imagen desconectada, monotonía, recortes, contraste y jerarquía con ubicación concreta.
+2. **Diseño:** antes de Higgsfield, exigir utilidad y evidencia del guion; después del render, mirar portada, miniatura y todos los PNG finales. Corregir imagen desconectada, monotonía, recortes, contraste y jerarquía con ubicación concreta.
 3. **Community manager:** lectura comercial natural, función de cada página, CTA realizable, utilidad sin exigir dejar datos.
 4. **Métricas y marketing:** declarar hipótesis y medición posible, no resultados. Compartidos/alcance y guardados/alcance cuando existan; clics/registros atribuidos si hay recurso. Retención por slide solo si la plataforma la entrega. Contrastar a48h y7d cuando exista publicación y muestra; falta de datos no es cero.
 
@@ -116,3 +124,7 @@ Al cerrar un ciclo, identifica regla, evidencia, destinatarios, motivo y prueba 
 ## Grafo y procedencia
 
 El runtime aporta un mapa curado de relaciones entre puestos, ofertas y recursos. Úsalo para encontrar el origen y el siguiente responsable; no significa acceso a todo el disco ni al grafo privado del workspace. Una relación INFERRED es una sugerencia que necesita comprobación. Comparte solo la lección aplicable a esa tarea, con evidencia y prueba pendiente; no conviertas preferencias estéticas en resultados comerciales.
+
+## Evidencia externa y coste
+
+Los guardados y compartidos externos ausentes son `null`; likes/comentarios no los reemplazan. Un umbral de veinte mil exige esa métrica exacta y su fuente, post y fecha. Referencias públicas sirven para observar estructura y plantear hipótesis; una misma selfie o una pieza tipográfica no son defectos. No afirmar causalidad ni que se escuchó música a partir de JPG. El audio no es requisito ni motivo para otra generación.
